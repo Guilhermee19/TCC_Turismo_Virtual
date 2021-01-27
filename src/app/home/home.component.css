@@ -1,0 +1,23 @@
+.screen{
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.main{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    line-height: 1 !important;
+    margin: 0 !important;
+}
