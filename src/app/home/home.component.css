@@ -60,7 +60,13 @@
 
 .div-loop{ 
     width: 190px;
-    flex-wrap: wrap;
+    margin: 0 10px;
+}
+.div-empty {
+    height: 0;
+    width: 190px;
+    margin: 0 10px;
+    content: "";
 }
 
 .div-movie{
