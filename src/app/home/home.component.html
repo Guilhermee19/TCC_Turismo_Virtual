@@ -1,41 +1,30 @@
+<div class="loading" id="loading">
+    <div class="div-img">
+        <img src="../../assets/image/dda1q7w-08f7f6f6-5006-4143-8e71-25bc849af286.gif">
+        LOADING...
+    </div>
+</div>
+
 <div class="screen">
     <div class="main">
         <div class="div-title design">
             <img src="https://media4.giphy.com/media/XzeRWmW7f5K4kZnrgB/giphy.gif" width="30px">
-            <p> Guilherme Santana Rocha </p>
+            <p> CineBigodee </p>
         </div>
     
-        <div class="information">
-            <div class="div-user">
-                <img src="https://avatars.githubusercontent.com/u/65672710?s=460&u=008e378575aea652fbe38cbdecc15d0de11c7080&v=4">
-            </div>
-            <div class="text design">
-                <p> Teresópolis - RJ </p>
-                <p> Ciência da Computação - UNIFESO </p>
-                <p> guilherme.santana1998@gmail.com </p>
-                <p> (21) 99149-8084 </p>
-            </div>
-        </div>
+       <div style="width: 100%; display: flex; justify-content: space-between; flex-wrap: wrap; margin: 15px 0;">
 
-        <div style="width: 100%; display: flex; justify-content: center; flex-direction: column;">
-            <iframe
-                width="560" 
-                height="315" 
-                src="https://www.youtube.com/embed/N9F2ks36KqA" 
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-            </iframe>
-
-            <iframe 
-                src="https://player.vimeo.com/video/505089741" 
-                width="640" 
-                height="480" 
-                frameborder="0" 
-                allow="autoplay; fullscreen; picture-in-picture" 
-                allowfullscreen>
-            </iframe>
-        </div>
+            <div *ngFor="let obj of array_list" class="div-loop">
+                <div class="div-movie">
+                    <div class="img-poster">
+                        <img [src]=" obj.img ">
+                    </div>
+                    <div class="title-movie">
+                        {{ obj.name }}
+                    </div>
+                </div>
+            </div>
+       </div>
     
     </div>
 </div>
