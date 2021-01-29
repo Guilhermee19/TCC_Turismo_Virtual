@@ -7,7 +7,7 @@
 
 <div class="screen">
     <div class="main">
-        <div class="div-title design">
+        <div class="div-title design" routerLink="/home">
             <img src="https://media4.giphy.com/media/XzeRWmW7f5K4kZnrgB/giphy.gif" width="30px">
             <p> CineBigodee </p>
         </div>
@@ -15,7 +15,7 @@
        <div style="width: 100%; display: flex; justify-content: space-around; flex-wrap: wrap; margin: 15px 0;">
 
             <div *ngFor="let obj of array_list" class="div-loop">
-                <div class="div-movie">
+                <div class="div-movie" routerLink="/movie/{{ obj.id }}">
                     <div class="img-poster">
                         <img [src]=" obj.img ">
                     </div>
