@@ -1,11 +1,11 @@
-<div class="loading" id="loading">
+<div class="loading" id="loading" *ngIf="!loading">
     <div class="div-img">
         <img src="../../assets/image/dda1q7w-08f7f6f6-5006-4143-8e71-25bc849af286.gif">
         LOADING...
     </div>
 </div>
 
-<div class="screen">
+<div class="screen" id="screen">
     <div class="main">
         <div class="div-title design" routerLink="/home">
             <img src="https://media4.giphy.com/media/XzeRWmW7f5K4kZnrgB/giphy.gif" width="30px">
@@ -17,14 +17,15 @@
             <div *ngFor="let obj of array_list" class="div-loop">
                 <div class="div-movie" routerLink="/movie/{{ obj.id }}">
                     <div class="img-poster">
-                        <img [src]=" obj.img ">
+                        <img [src]=" obj.image ">
                     </div>
                     <div class="title-movie">
                         {{ obj.name }}
                     </div>
                 </div>
             </div>
-            <div class="div-empty"></div>
+            <div class="div-movie" (click)="newMovie()" 
+                style="width: 160px; text-align: center; font-size: 75px; font-weight: 600;"> + </div>
             <div class="div-empty"></div>
             <div class="div-empty"></div>
        </div>
