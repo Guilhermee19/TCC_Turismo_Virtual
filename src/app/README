@@ -1,6 +1,0 @@
-## LOCAL ##
-cd cine-bigode-web\src\app
-
-
-## INICIAR API ##
--> json-server --watch db.json

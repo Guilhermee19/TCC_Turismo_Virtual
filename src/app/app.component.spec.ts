@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'cine-bigode-web'`, () => {
+  it(`should have as title 'RealidadeAumentada'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('cine-bigode-web');
+    expect(app.title).toEqual('RealidadeAumentada');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('cine-bigode-web app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('RealidadeAumentada app is running!');
   });
 });
