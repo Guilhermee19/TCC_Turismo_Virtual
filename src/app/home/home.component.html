@@ -1,15 +1,47 @@
 <p>home works!</p>
 
-<!-- <div class="arjs-loader">
-    <div>Loading, please wait...</div>
-</div> -->
-
 <!-- a-frame scene -->
-<a-scene>
+<!-- <a-scene>
     <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
     <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-    <!-- <a-box position='1 0.75 -3' material='color: black;'></a-box> -->
+    <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
     <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-    <a-sky color="#fff"></a-sky>
-    <a-entity camera></a-entity>
-</a-scene>
+    <a-sky color="#ECECEC"></a-sky>
+</a-scene> -->
+
+<a-scene background="color: #333" stats>
+    <a-assets>
+      <a-mixin id="planet" geometry="primitive: sphere; radius: 0.5"></a-mixin>
+      <a-mixin id="orbitAnimation" animation="property: object3D.rotation.y; to: 360; loop: true; easing: linear; dur: 3000"></a-mixin>
+      <a-mixin id="spinAnimation" animation="property: object3D.rotation.y; to: 360; loop: true; easing: linear; dur: 96000"></a-mixin>
+      <img id="sun" src="../../assets/image/sun.jpg">
+    </a-assets>
+
+    <a-entity position="0 0 6">
+      <a-camera wasd-controls-enabled="false"></a-camera>
+    </a-entity>
+
+    <a-entity position="0 0 -5">
+      <!-- Lights. -->
+      <a-entity light="type: point; intensity: 2"></a-entity>
+      <a-entity light="type: ambient; color: #888"></a-entity>
+
+      <a-entity mixin="planet spinAnimation" geometry="radius: 3" material="shader: flat; src: #sun"></a-entity>
+
+      <a-entity mixin="orbitAnimation" animation="dur: 8000">
+        <a-entity mixin="planet" material="color: red" position="8 0 0" geometry="radius: 1"></a-entity>
+      </a-entity>
+
+      <a-entity mixin="orbitAnimation" animation="dur: 4000">
+        <a-entity mixin="planet" material="color: blue" position="6 0 0"></a-entity>
+      </a-entity>
+<!-- 
+      <a-entity mixin="orbitAnimation" animation="dur: 2000">
+        <a-entity
+          animation__p="property: geometry.p; dir: alternate; easing: linear; loop: true; to: 4"
+          animation__q="property: geometry.q; dir: alternate; easing: linear; loop: true; to: 7"
+          geometry="primitive: torusKnot; radius: .5; radiusTubular: .05"
+          material="color: green" position="4 0 0"></a-entity>
+      </a-entity> -->
+    </a-entity>
+  </a-scene>
