@@ -1,10 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { HomeComponent } from './home/home.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatSidenavModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
