@@ -3,18 +3,26 @@
         
         <div style="background-color: #202427; width: 100%; height: 40px; box-shadow: 0 2px 5px 0 rgb(0,0,0,0.2);"></div>
 
-        <div class="option select">
+        <div class="option" [ngClass]="{'select': select == 'batata'}" (click)="select = 'batata'">
             Home
         </div>
 
-        <div class="option">
+        <div class="option" [ngClass]="{'select': select == 'pudim'}" (click)="select = 'pudim'">
             Home
         </div>
 
-        <div class="option">
+        <div class="option" [ngClass]="{'select': select == 'banana'}" (click)="select = 'banana'">
             Home
         </div>
       
+        <div class="option" [ngClass]="{'select': select == 'ovo'}" (click)="select = 'ovo'">
+            Home
+        </div>
+
+        <div class="option" [ngClass]="{'select': select == 'pao'}" (click)="select = 'pao'">
+            Home
+        </div>
+
         <div class="user">
             <img class="photo-user"
                 src="https://scontent-gru2-2.xx.fbcdn.net/v/t1.6435-9/62171633_2071460302963068_7291068964803706880_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=09cbfe&_nc_eui2=AeEs81MBbbQ8ZzJTpl_pSGE4i5ue6BXgqKqLm57oFeCoqsOneX_lkIHPdHBX0_II81GKbhvwJUiw-3UH2tEnCaSZ&_nc_ohc=-q1kXEorh2UAX-dJ6a9&_nc_oc=AQlcura9qjiRkuLE2lQIUFTKs3iUToRTHk4_wkebiL_bTeHgTM3G7MM1RJbfK6T9KmI&_nc_ht=scontent-gru2-2.xx&oh=1ec96230cc1117ad9fa1f8585264dab5&oe=60A3BC26">
@@ -22,14 +30,14 @@
                 <div class="name"> Guilherme </div>
                 <div class="type"> user </div>
             </div>
-            <img style="width: 35px; height: 35px; object-fit: contain;"
+            <img style="width: 35px; height: 35px; object-fit: contain; cursor: pointer;"
                 src="https://img.icons8.com/ios/452/settings--v1.png">
         </div>
     </mat-drawer>
   
     <div class="screen-content">
         <div class="botton-sidenav" (click)="drawer.toggle()">
-            OPEN
+            MENU
         </div>
 
         <div style="width: 100%; height: 100%; z-index: -5;">

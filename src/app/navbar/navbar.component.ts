@@ -10,6 +10,7 @@ export class NavbarComponent implements OnInit {
     constructor() { }
     
     showFiller = false;
+    select: string = 'banana';
 
     ngOnInit(): void {
     }
