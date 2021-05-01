@@ -3,24 +3,26 @@
         
         <div style="background-color: #202427; width: 100%; height: 40px; box-shadow: 0 2px 5px 0 rgb(0,0,0,0.2);"></div>
 
-        <div class="option" [ngClass]="{'select': select == 'batata'}" (click)="select = 'batata'">
-            Home
-        </div>
+        <div class="tam-type">
+            <div class="option" [ngClass]="{'select': select == 'home'}" (click)="select = 'home'">
+                Home
+            </div>
 
-        <div class="option" [ngClass]="{'select': select == 'pudim'}" (click)="select = 'pudim'">
-            Home
-        </div>
+            <div class="option" [ngClass]="{'select': select == 'camera'}" (click)="select = 'camera'">
+                Camera
+            </div>
 
-        <div class="option" [ngClass]="{'select': select == 'banana'}" (click)="select = 'banana'">
-            Home
-        </div>
-      
-        <div class="option" [ngClass]="{'select': select == 'ovo'}" (click)="select = 'ovo'">
-            Home
-        </div>
+            <div class="option" [ngClass]="{'select': select == 'banana'}" (click)="select = 'banana'">
+                Home
+            </div>
+        
+            <div class="option" [ngClass]="{'select': select == 'ovo'}" (click)="select = 'ovo'">
+                Home
+            </div>
 
-        <div class="option" [ngClass]="{'select': select == 'pao'}" (click)="select = 'pao'">
-            Home
+            <div class="option" [ngClass]="{'select': select == 'pao'}" (click)="select = 'pao'">
+                Home
+            </div>
         </div>
 
         <div class="user">
@@ -40,8 +42,12 @@
             MENU
         </div>
 
-        <div style="width: 100%; height: 100%; z-index: -5;">
-            <router-outlet></router-outlet>
+        <div style="width: 100%; height: 100%; z-index: -5;" *ngIf="select == 'home'">
+            <app-home></app-home>
+        </div>
+
+        <div style="width: 100%; height: 100%; z-index: -5;" *ngIf="select == 'camera'">
+           <app-camera></app-camera>
         </div>
     </div>
   

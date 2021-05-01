@@ -35,6 +35,10 @@
     justify-content: flex-start;
 }
 
+.tam-type{
+    height: calc(100vh - 100px);
+}
+
 .option{
     width: auto;
     padding: 10px 0 10px 25px;
