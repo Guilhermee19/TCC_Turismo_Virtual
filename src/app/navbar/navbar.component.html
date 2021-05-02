@@ -41,11 +41,11 @@
     </mat-drawer>
   
     <div class="screen-content">
-        <div class="botton-sidenav" (click)="drawer.toggle()">
+        <div class="botton-sidenav" (click)="drawer.toggle()" style="z-index: 999;">
             MENU
         </div>
 
-        <div style="width: 100%; height: 100%; z-index: -5;">
+        <div style="width: 100%; height: 100%;">
             <router-outlet></router-outlet>
         </div>
     </div>
