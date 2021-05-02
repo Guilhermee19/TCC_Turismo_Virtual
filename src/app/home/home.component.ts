@@ -9,7 +9,10 @@ export class HomeComponent implements OnInit {
 
   constructor() { }
 
+  position: string;
+
   ngOnInit(): void {
+    this.position = '0 1.6 0';
   }
 
 }

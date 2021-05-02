@@ -1,5 +1,3 @@
-<p>home works!</p>
-
 <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
 <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
@@ -17,5 +15,14 @@
     <a-entity gltf-model="../../assets/modelo3D/MonumentoDedoDeDeus.gltf" scale="1 1 1" position="-2 0 -6"> </a-entity>
     <a-plane position="-1 -1 -6" rotation="-90 0 0" width="500" height="500" color="#258ace"></a-plane>
     
-    <a-sky color="#ECECEC" position='0 1.6 0'></a-sky>
+    <a-sky color="#ECECEC" position='{{ position }}' look-controls></a-sky>
 </a-scene>
+
+<!-- Bottons Movimentação -->
+<div style="display: none;">
+    <button class="arrows" id="top" style="position: absolute; bottom: 65px; right: 35px;"> ↑ </button>
+    <button class="arrows" id="left" style="position: absolute; bottom: 35px; right: 65px;"> ← </button>
+    <button class="arrows" id="right" style="position: absolute; bottom: 35px; right: 5px;"> → </button>
+    <button class="arrows" id="bottom" style="position: absolute; bottom: 5px;  right: 35px;"> ↓ </button>
+    <button class="arrows" id="center" style="position: absolute; bottom: 35px;  right: 35px;"> O </button>
+</div>

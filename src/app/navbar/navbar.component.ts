@@ -11,6 +11,10 @@ export class NavbarComponent implements OnInit {
     constructor( private router: Router) { 
         this.router.events.subscribe( data => {
             this.url = this.router.url;
+
+            if(this.url == '/home')  this.title = 'Realidade Virtual';
+            else if(this.url == '/camera')  this.title = 'Realidade Aumentada';
+
         }); 
     }
     
@@ -19,6 +23,7 @@ export class NavbarComponent implements OnInit {
     url;
     select
 
+    title: string;
     ngOnInit(): void {
     }
 

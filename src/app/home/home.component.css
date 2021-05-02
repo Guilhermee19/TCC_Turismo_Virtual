@@ -4,3 +4,39 @@ p{
     text-align: center;
     z-index: 99;
 }
+
+.arrows{
+    width: 30px;
+    height: 30px;
+    border: 0px solid transparent;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.arrows:hover{
+    background-color: rgb(232, 232, 232);
+}
+
+#top{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+#bottom{
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+#left{
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+#right{
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}

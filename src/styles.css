@@ -12,3 +12,7 @@ body {
 .mat-drawer-side {
     border-right: 0 solid  transparent !important;
 }
+
+.a-enter-vr-button{
+    top: 75px;
+}
