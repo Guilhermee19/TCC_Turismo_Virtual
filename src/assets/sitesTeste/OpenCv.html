@@ -23,15 +23,15 @@
             }, false);
 
             imgElement.onload = function() {
+                console.log(imgElement)
                 let mat = cv.imread(imgElement);
+                console.log(mat)
+
                 cv.imshow('canvasOutput', mat);
                 mat.delete();
+                document.getElementById('status').innerHTML = 'OpenCV.js is ready.';
             };
 
-            function onOpenCvReady() {
-                document.getElementById('status').innerHTML = 'OpenCV.js is ready.';
-            }
         </script>
-        <script async src="opencv.js" onload="onOpenCvReady();" type="text/javascript"></script>
     </body>
 </html>

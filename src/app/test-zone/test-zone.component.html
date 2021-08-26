@@ -1,2 +1,13 @@
-<p>test-zone works!</p>
-<app-screen-opencv></app-screen-opencv>
+<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+<script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+
+<!-- a-frame scene -->
+<a-scene>
+    <a-entity gltf-model="../../assets/modelo3D/MonumentoDedoDeDeus.gltf" scale="1 1 1" position="-2 0 -6"> </a-entity>
+    <a-entity gltf-model="../../assets/modelo3D/Poste.gltf" scale="2.7 2.7 2.7" position="-2 0 -3"> </a-entity>
+
+    <a-plane position="-1 -1 -6" rotation="-90 0 0" width="500" height="500" color="#258ace"></a-plane>
+    
+    <a-sky color="#ECECEC" position='0 0 0' look-controls></a-sky>
+</a-scene>

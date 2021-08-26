@@ -10,10 +10,10 @@ export class VirtualEnvironmentComponent implements OnInit {
     constructor() { }
 
     position: string;
-
+    sunLight: number;
     
     ngOnInit(): void {
-        this.position = '0 1.6 0';
+        
     }
 
 }
