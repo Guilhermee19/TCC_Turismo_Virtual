@@ -12,8 +12,10 @@ export class NavbarComponent implements OnInit {
         this.router.events.subscribe( data => {
             this.url = this.router.url;
 
-            if(this.url == '/home')  this.title = 'Realidade Virtual';
-            else if(this.url == '/camera')  this.title = 'Realidade Aumentada';
+            if(this.url == '/virtual')  this.title = 'Realidade Virtual';
+            else if(this.url == '/detection')  this.title = 'Realidade Aumentada';
+            else if(this.url == '/location')  this.title = 'Realidade por Localização';
+            else if(this.url == '/test-zone')  this.title = 'Zona de Testes';
 
         }); 
     }
@@ -25,6 +27,9 @@ export class NavbarComponent implements OnInit {
 
     title: string;
     ngOnInit(): void {
+        setTimeout(() => {
+            console.clear();
+        }, 1000);
     }
 
 }
