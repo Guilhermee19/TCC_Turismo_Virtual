@@ -1,3 +1,14 @@
-<div style="width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center;">
+<div *ngIf="!qrcode" style="width: 100%; height: 100vh; flex-direction: column; display: flex; justify-content: center; align-items: center;">
+    <h1> Primeiros Passos: </h1> 
+
+    <h3>  Para fazer a leitura do Qrcode você precisa estar com uma webcam ligada no computador. </h3>
+    <h3> Ter baixado a imagem do Qrcode, caso ainda não tenha baixado <a href="../../assets/image/Hiro.jpeg" download> click aqui</a> </h3>
+
+    <button mat-button style="    background-color: #008ad8; color: white; width: 150px;" (click)="qrcode = true"> 
+        Começar 
+    </button>
+</div>
+
+<div *ngIf="qrcode" style="width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center;">
     <iframe width="100%" height="100%" style="border: 0px solid transparent; overflow: hidden;" src="../../assets/sitesTeste/RA_mark1.html"></iframe>
 </div>

@@ -11,6 +11,8 @@ export class DetectionQrcodeComponent implements OnInit {
 
     constructor() { }
 
+    qrcode: boolean = false;
+
     ngOnInit(): void {
     }
 
