@@ -4,6 +4,27 @@
 
 <a-scene>
       
+    <table style="position: absolute; top: 50%; right: 50%; z-index: 9999;">
+        <tr>
+          <td colspan="2" align="center">
+            <input type="button" value="Acima" onclick="direcionar(38)" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="button" value="Esquerda" onclick="direcionar(37)"/>    
+          </td>
+          <td>
+            <input type="button" value="Direita" onclick="direcionar(39)"/>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center">
+            <input type="button" value="Abaixo" onclick="direcionar(40)"/>
+          </td>
+        </tr>
+    </table>
+
     <!-- <a-entity gltf-model="../../assets/modelo3D/MonumentoDedoDeDeus.gltf" scale="1 1 1" position="-3 0 -6"> </a-entity> -->
     <!-- <a-entity gltf-model="../../assets/modelo3D/Poste.gltf" scale="2.2 2.2 2.2" position="-3 0 -2"> </a-entity> -->
     <!-- <a-entity gltf-model="../../assets/modelo3D/Grades.gltf" scale="0.4 0.4 0.4" position="-18 0 -15"> </a-entity> -->

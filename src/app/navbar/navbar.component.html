@@ -4,13 +4,13 @@
         <div style="background-color: #202427; width: 100%; height: 40px; box-shadow: 0 2px 5px 0 rgb(0,0,0,0.2);"></div>
 
         <div class="tam-type">
-            <div class="option" routerLink="/virtual"
+            <div class="option" routerLink="/virtual" (click)="drawer.toggle()"
                 [ngClass]="{'select': url == '/virtual'}">
                 <img src="../../assets/image/icon/icon_360.png" class="icon">
                 Realidade Virtual
             </div>
-
-            <div class="option" routerLink="/detection"
+ 
+            <div class="option" routerLink="/detection" (click)="drawer.toggle()"
                 [ngClass]="{'select': url == '/detection'}">
                 <img src="../../assets/image/icon/icon_RA.png" class="icon">
                 Realidade Aumentada
@@ -22,12 +22,6 @@
                     Baixar Qrcode
                 </a>
             </div>
-
-            <!-- <div class="option" routerLink="/location"
-                [ngClass]="{'select': url == '/location'}">
-                <img src="../../assets/image/icon/icon_location.png" class="icon">
-                Detecção no GPS
-            </div> -->
 
             <!-- <div class="option" routerLink="/test-zone"
                 [ngClass]="{'select': url == '/test-zone'}">
