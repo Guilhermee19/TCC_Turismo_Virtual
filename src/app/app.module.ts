@@ -3,6 +3,7 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 // import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { MatMenuModule } from '@angular/material/menu';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,7 +27,8 @@ import { VirtualEnvironmentComponent } from './virtual-environment/virtual-envir
     MatSidenavModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    // SlickCarouselModule
+    // SlickCarouselModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent],

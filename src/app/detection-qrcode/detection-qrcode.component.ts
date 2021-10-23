@@ -1,21 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-// import * as THREE from '../../assets/libs/three.js';
-// declare var THREE: any;
+import { StorageService } from '../service/storage.service';
 
 @Component({
     selector: 'app-detection-qrcode',
     templateUrl: './detection-qrcode.component.html',
     styleUrls: ['./detection-qrcode.component.css']
 })
+
 export class DetectionQrcodeComponent implements OnInit {
 
-    constructor() { }
+    constructor(
+        private storage: StorageService
+    ) { }
 
     qrcode: boolean = false;
 
     list=[
+        {name: 'Todos', code:'modelo_00'},
         {name: 'Dedo de Deus', code:'modelo_01'},
-        {name: 'Monumento olímpico', code:'modelo_02'}
+        {name: 'Monumento Olímpico', code:'modelo_02'}
     ]
     select: string = '';
 
@@ -30,7 +33,6 @@ export class DetectionQrcodeComponent implements OnInit {
         let code = localStorage.getItem('code')
         this.select = code != null ? code : this.list[0].code;
         // console.log(this.select)
-
     }
 
     checkTermo(){

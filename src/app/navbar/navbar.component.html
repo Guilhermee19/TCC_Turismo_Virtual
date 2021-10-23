@@ -16,12 +16,26 @@
                 Realidade Aumentada
             </div>
 
-            <div class="option">
-                <a style="text-decoration: none; color: white; display: flex; justify-content: flex-start; align-items: center;" href="../../assets/QRCode/QRG.png" download> 
-                    <img src="../../assets/image/icon/download.png" class="icon">
-                    Baixar Qrcode
-                </a>
+            <div class="option" [matMenuTriggerFor]="menu">
+                <img src="../../assets/image/icon/download.png" class="icon">
+                Baixar Qrcode
             </div>
+
+            <!-- <div class="option" (click)="sendEmail()">
+                <img src="../../assets/image/icon/chat.png" class="icon">
+                Feedback
+            </div> -->
+            
+            <mat-menu #menu="matMenu" xPosition="before">
+                <div *ngFor="let qrcode of qrcodes">
+                    <a style="text-decoration: none; color: white; display: flex; justify-content: flex-start; align-items: center;" href="{{ qrcode.image }}" download> 
+                        <button mat-menu-item style="width: 120px; display: flex; justify-content: space-between; align-items: center;">
+                            {{ qrcode.name }}
+                            <img [src]="qrcode.image" style="width: 30px; height: 30px; object-fit: contain;">
+                        </button>
+                    </a>
+                </div>
+            </mat-menu>
 
             <!-- <div class="option" routerLink="/test-zone"
                 [ngClass]="{'select': url == '/test-zone'}">
@@ -62,3 +76,43 @@
   
 </mat-drawer-container>
 
+<!-- 
+    app.component.spec.ts
+
+import { TestBed, async } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { AppComponent } from './app.component';
+
+describe('AppComponent', () => {
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      imports: [
+        RouterTestingModule
+      ],
+      declarations: [
+        AppComponent
+      ],
+    }).compileComponents();
+  }));
+
+  it('should create the app', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app).toBeTruthy();
+  });
+
+  it(`should have as title 'RealidadeAumentada'`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.title).toEqual('RealidadeAumentada');
+  });
+
+  it('should render title', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('.content span').textContent).toContain('RealidadeAumentada app is running!');
+  });
+});
+
+ -->

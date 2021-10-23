@@ -20,6 +20,12 @@
 
 
 <a-scene>
+    <a-assets>
+        <audio src="/assets/ruido-ambiente-da-cidade.mp3" volume="0.01" autoplay></audio>
+        <img id="sky" src="http://360.littlstar.com/production/027a3245-0340-41c0-b0e1-8b7259d3ab69/web_poster.jpg">
+        <img id="city" src="https://thumbs.dreamstime.com/b/seamless-sky-sea-panorama-daytime-suitable-d-renderings-as-background-mapped-sphere-representing-42211614.jpg">>>
+    </a-assets>
+
     <!-- <a-light type="directional" position="0 0 0" rotation="-90 -90 0" target="#directionaltarget">
         <a-entity id="directionaltarget" position="0 0 -1"></a-entity>
     </a-light> -->
@@ -34,8 +40,8 @@
     <a-plane rotation="-90 0 0" width="500" height="500" 
         material="src: assets/image/textura/chão.jpg; color: #696969; repeat: 100 100; metalness: 0" ></a-plane>
         
-    <a-sky color="#ECECEC" position='0 0 0' look-controls></a-sky>
-    
+    <a-sky radius="120" src="#city"></a-sky>
+
     <a-entity id="camera-rig" mixin="campos">
         <a-entity camera="active: true" look-controls id="cardCamera" wasd-controls position="0 2 0"></a-entity>
     </a-entity>

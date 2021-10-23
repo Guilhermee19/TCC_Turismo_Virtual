@@ -10,19 +10,23 @@
 				window.dispatchEvent(resizeEvent);
 			}, 3000);
 		};	
-		</script>	
+	</script>	
 
+	<style>
+		.a-enter-vr-button{
+			display: none !important;
+		}
+	</style>
 	<body style='margin : 0px; overflow: hidden;'>
 		<a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false;'>
-			
+
 			<a-marker preset='custom' type='pattern' url='/assets/QRCode/QRG.patt'>
-			
 				<a-entity gltf-model="/assets/modelo3D/MonumentoDedoDeDeus.gltf" scale="0.2 0.2 0.2" rotation="0 0 0" position="0 0 0" modify-materials> </a-entity>
-				
 			</a-marker>
-			
-			<a-entity camera></a-entity> 
-		</a-scene>
+				
+			<a-entity camera></a-entity>
+		  </a-scene>
+
 	</body>
 
 </html>

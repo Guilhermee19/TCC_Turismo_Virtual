@@ -62,30 +62,4 @@ export class VirtualEnvironmentComponent implements OnInit {
         console.log(this.save_array.x, this.save_array.y, this.save_array.z)
     }
 
-    move(value){
-        var position = document.getElementById('cardCamera')
-        console.log(position.addEventListener.prototype)
-
-        console.log(value)
-
-        switch(value){
-            case 'W': 
-                this.array.y += 10;
-                break;
-            case 'D': 
-                this.array.x -= 10;
-                break;
-            case 'S': 
-                this.array.y -= 10;
-                break;
-            case 'A': 
-                this.array.x += 10;
-                break;
-        }
-
-        this.position = `${this.array.x} ${this.array.y} ${this.array.z}`;
-        console.log(this.position)
-    }
-
-
 }
