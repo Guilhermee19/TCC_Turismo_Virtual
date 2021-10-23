@@ -2,7 +2,7 @@
     <h1> Primeiros Passos: </h1> 
 
     <h3>  Para fazer a leitura do Qrcode você precisa estar com uma webcam ligada no computador. </h3>
-    <h3> Ter baixado a imagem do Qrcode, caso ainda não tenha baixado <a href="../../assets/image/Hiro.jpeg" download> click aqui</a> ou no menu lateral do site</h3>
+    <h3> Ter baixado a imagem do Qrcode, caso ainda não tenha baixado <a href="../../assets/QRCode/QRG.png" download> click aqui</a> ou no menu lateral do site</h3>
 
     <button mat-button style="background-color: #008ad8; color: white; width: 150px;" (click)="checkTermo()"> 
         Começar 
@@ -17,6 +17,17 @@
             </button>
         </div>
     </div>
+
+    <!-- <ngx-slick-carousel class="carousel options" #slickModal="slick-carousel" [config]="slideConfig"  
+        (afterChange)="afterChange($event)" (beforeChange)="beforeChange($event)">
+
+        <div ngxSlickItem *ngFor="let item of list">
+            <button mat-button (click)="selectModelo(item.code)" 
+                [ngClass]="{'select': select == item.code}" class="card_option"> {{ item.name }}
+            </button>
+        </div>
+        
+    </ngx-slick-carousel> -->
 
     <iframe *ngIf="select == 'modelo_01'" width="100%" height="100%" style="border: 0px solid transparent; overflow: hidden;" src="../../assets/sitesTeste/Modelo_1.html"></iframe>
     <iframe *ngIf="select == 'modelo_02'" width="100%" height="100%" style="border: 0px solid transparent; overflow: hidden;" src="../../assets/sitesTeste/Modelo_2.html"></iframe>

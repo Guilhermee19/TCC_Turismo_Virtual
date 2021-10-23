@@ -29,7 +29,7 @@ export class DetectionQrcodeComponent implements OnInit {
         }
         let code = localStorage.getItem('code')
         this.select = code != null ? code : this.list[0].code;
-        console.log(this.select)
+        // console.log(this.select)
 
     }
 
@@ -42,4 +42,32 @@ export class DetectionQrcodeComponent implements OnInit {
         this.select = item
         localStorage.setItem('code', item)
     }
+
+    // afterChange(e) {
+    //     console.log('afterChange');
+    // }
+    
+    // beforeChange(e) {
+    //     console.log('beforeChange');
+    // }
+
+    // slideConfig = {  
+    //     "slidesToShow": 1,  
+    //     "slidesToScroll": 1,  
+    //     "dots": true,
+    //     "arrows": false,  
+    //     "infinite": true,
+    //     "autoplay": true,
+    //     "swipeToSlide": true,
+    //     "autoplaySpeed": 5000,
+    //     "lazyLoad": 'ondemand',
+    //     "responsive": 
+    //     [{
+    //         "breakpoint": 600,
+    //         "settings": {
+    //             "dots": false,
+    //         }
+    //     }]
+    // }; 
+
 }

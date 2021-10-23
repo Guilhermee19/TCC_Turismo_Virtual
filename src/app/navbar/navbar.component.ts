@@ -28,7 +28,7 @@ export class NavbarComponent implements OnInit {
     title: string;
     ngOnInit(): void {
         setTimeout(() => {
-            console.clear();
+            // console.clear();
         }, 1000);
     }
 
