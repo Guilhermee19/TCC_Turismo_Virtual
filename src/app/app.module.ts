@@ -4,6 +4,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 // import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { MatMenuModule } from '@angular/material/menu';
+import { AgmCoreModule } from '@agm/core';
+// import { MapsService } from './maps.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DetectionQrcodeComponent } from './detection-qrcode/detection-qrcode.component';
 import { TestZoneComponent } from './test-zone/test-zone.component';
 import { VirtualEnvironmentComponent } from './virtual-environment/virtual-environment.component';
+import { LocationOnMapComponent } from './location-on-map/location-on-map.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +23,7 @@ import { VirtualEnvironmentComponent } from './virtual-environment/virtual-envir
     DetectionQrcodeComponent,
     TestZoneComponent,
     VirtualEnvironmentComponent,
+    LocationOnMapComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,7 +32,10 @@ import { VirtualEnvironmentComponent } from './virtual-environment/virtual-envir
     BrowserAnimationsModule,
     MatButtonModule,
     // SlickCarouselModule,
-    MatMenuModule
+    MatMenuModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCVkT1zBJaeZqoUJgBUAmx6zfwSCtD-2q8'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent],

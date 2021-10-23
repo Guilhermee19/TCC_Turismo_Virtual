@@ -4,6 +4,13 @@
         <div style="background-color: #202427; width: 100%; height: 40px; box-shadow: 0 2px 5px 0 rgb(0,0,0,0.2);"></div>
 
         <div class="tam-type">
+            
+            <div class="option" routerLink="/location-map" (click)="drawer.toggle()"
+                [ngClass]="{'select': url == '/location-map'}">
+                <img src="../../assets/image/icon/icon_RA.png" class="icon">
+                Mapa 
+            </div>
+            
             <div class="option" routerLink="/virtual" (click)="drawer.toggle()"
                 [ngClass]="{'select': url == '/virtual'}">
                 <img src="../../assets/image/icon/icon_360.png" class="icon">
@@ -15,6 +22,7 @@
                 <img src="../../assets/image/icon/icon_RA.png" class="icon">
                 Realidade Aumentada
             </div>
+
 
             <div class="option" [matMenuTriggerFor]="menu">
                 <img src="../../assets/image/icon/download.png" class="icon">

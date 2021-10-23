@@ -1,0 +1,29 @@
+<div class="card_locations card_glass">
+    <div *ngFor="let location of locationList, let i = index">
+        <div class="store" (click)="goMap(location)">
+            <div class="title">{{ location.title }}</div>         
+        </div>
+        <div class="detail">
+          <div class="detail-icon"></div>
+        </div>
+    </div>
+</div>
+
+<agm-map 
+    [latitude]="lat" 
+    [longitude]="lng"  
+    [zoom]="zoom"
+    [disableDefaultUI]="false"
+    [zoomControl]="false">
+    
+    <agm-marker *ngFor="let m of locationList; let i = index" 
+        [latitude]="m.lat" [longitude]="m.lng" [iconUrl]="m.icon">
+        <agm-info-window>
+            <strong>{{m.title}}</strong>
+
+            <div class="info">
+                teste
+            </div>
+        </agm-info-window>
+    </agm-marker>
+</agm-map>

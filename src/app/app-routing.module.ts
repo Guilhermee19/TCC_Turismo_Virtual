@@ -4,6 +4,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { DetectionQrcodeComponent } from './detection-qrcode/detection-qrcode.component';
 import { VirtualEnvironmentComponent } from './virtual-environment/virtual-environment.component';
 import { TestZoneComponent } from './test-zone/test-zone.component';
+import { LocationOnMapComponent } from './location-on-map/location-on-map.component';
 
 const routes: Routes = [
     {path: '', component: NavbarComponent,
@@ -11,7 +12,8 @@ const routes: Routes = [
             {path:'', redirectTo: 'virtual', pathMatch: 'full'},
             {path:'virtual', component: VirtualEnvironmentComponent },
             {path:'detection', component: DetectionQrcodeComponent },
-            {path:'test-zone', component: TestZoneComponent }
+            {path:'test-zone', component: TestZoneComponent },
+            {path:'location-map', component: LocationOnMapComponent },
         ]
     },
     {path:'**', redirectTo: 'virtual' }
