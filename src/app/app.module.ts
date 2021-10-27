@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 // import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { MatMenuModule } from '@angular/material/menu';
 import { AgmCoreModule } from '@agm/core';
@@ -35,7 +36,8 @@ import { LocationOnMapComponent } from './location-on-map/location-on-map.compon
     MatMenuModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCVkT1zBJaeZqoUJgBUAmx6zfwSCtD-2q8'
-    })
+    }),
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent],

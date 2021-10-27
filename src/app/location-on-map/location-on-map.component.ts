@@ -23,16 +23,16 @@ export class LocationOnMapComponent implements OnInit {
   locationList: any = []
 
   ngOnInit(): void {
-
+    const d = document.getElementsByClassName("draggable");
+    
     this.locationList = this.storage.getCityLocations();
     // console.log(this.locationList)
-
   }
 
   goMap(event) {
     // console.log(event);
     this.lat = event.lat
-    this.lng = event.lng + 0.0015
+    this.lng = event.lng + 0.0005
   }
 
 }
