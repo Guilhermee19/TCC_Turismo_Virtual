@@ -32,7 +32,8 @@ export class LocationOnMapComponent implements OnInit {
   goMap(event) {
     // console.log(event);
     this.lat = event.lat
-    this.lng = event.lng + 0.0005
+    this.lng = event.lng
+    this.zoom = 17
   }
 
 }
