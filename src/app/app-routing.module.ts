@@ -9,7 +9,7 @@ import { LocationOnMapComponent } from './location-on-map/location-on-map.compon
 const routes: Routes = [
     {path: '', component: NavbarComponent,
         children:[
-            {path:'', redirectTo: 'virtual', pathMatch: 'full'},
+            {path:'', redirectTo: 'location-map', pathMatch: 'full'},
             {path:'virtual', component: VirtualEnvironmentComponent },
             {path:'detection', component: DetectionQrcodeComponent },
             {path:'test-zone', component: TestZoneComponent },
