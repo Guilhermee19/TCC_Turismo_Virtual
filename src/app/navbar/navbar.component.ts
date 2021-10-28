@@ -15,6 +15,7 @@ export class NavbarComponent implements OnInit {
     ) { 
         this.router.events.subscribe( data => {
             this.url = this.router.url;
+            if(this.url == '/location-map')  this.title = 'Localizações';
             if(this.url == '/virtual')  this.title = 'Realidade Virtual';
             else if(this.url == '/detection')  this.title = 'Realidade Aumentada';
             else if(this.url == '/location')  this.title = 'Realidade por Localização';

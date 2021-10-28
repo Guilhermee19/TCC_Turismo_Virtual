@@ -22,6 +22,12 @@ h2{
     height: 40px;
 }
 
+.screen{
+    width: 100%;
+    margin-top: 40px;
+    height: calc(100vh - 40px);
+}
+
 .card_locations{
     position: absolute;
     top: 45px;
@@ -43,7 +49,7 @@ h2{
 }
 
 .card_glass{
-    background: rgba(102, 102, 102, 0.1);
+    background: rgba(255, 255, 255, 0.1);
     /* background: -moz-linear-gradient(45deg, rgba(255,255,255,0.1) 0%, rgba(248,248,248,0.6) 100%);
     background: -webkit-linear-gradient(45deg, rgba(255,255,255,0.1) 0%, rgba(248,248,248,0.6) 100%);
     background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, rgba(248,248,248,0.6) 100%); */
@@ -65,4 +71,12 @@ h2{
     position: absolute;
     left: 10px;
     cursor: move;
+}
+
+.screen_tutorial{
+    width: 100%;
+    min-height: 100vh;
+    position: relative !important;
+    background-color: rgba(0, 0, 0, 0.4) !important;
+    z-index: 1;
 }

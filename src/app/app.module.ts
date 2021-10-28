@@ -16,6 +16,7 @@ import { DetectionQrcodeComponent } from './detection-qrcode/detection-qrcode.co
 import { TestZoneComponent } from './test-zone/test-zone.component';
 import { VirtualEnvironmentComponent } from './virtual-environment/virtual-environment.component';
 import { LocationOnMapComponent } from './location-on-map/location-on-map.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { LocationOnMapComponent } from './location-on-map/location-on-map.compon
     TestZoneComponent,
     VirtualEnvironmentComponent,
     LocationOnMapComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

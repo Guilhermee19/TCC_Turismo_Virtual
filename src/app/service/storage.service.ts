@@ -28,6 +28,13 @@ export class StorageService {
             title: 'Igreja Matriz de Santa Teresa',
             icon: '/assets/image/icon/location.png',
             draggable: false,
+        },
+        {
+            lat: -22.462654,
+            lng: -42.986707,
+            title: 'Mirante do Soberbo',
+            icon: '/assets/image/icon/location.png',
+            draggable: false,
         }
       ];
 

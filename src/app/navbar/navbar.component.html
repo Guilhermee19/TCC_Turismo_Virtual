@@ -5,9 +5,15 @@
 
         <div class="tam-type">
             
+            <div class="option" routerLink="/home" (click)="drawer.toggle()"
+                [ngClass]="{'select': url == '/home'}">
+                <img src="../../assets/image/icon/icon_home.png" class="icon">
+                Inicial 
+            </div>
+            
             <div class="option" routerLink="/location-map" (click)="drawer.toggle()"
                 [ngClass]="{'select': url == '/location-map'}">
-                <img src="../../assets/image/icon/icon_RA.png" class="icon">
+                <img src="../../assets/image/icon/icons_map.png" class="icon">
                 Mapa 
             </div>
             
@@ -64,7 +70,7 @@
         </div> -->
 
         <div style="position: absolute; bottom: 5px; left: 10px;">
-            versão 1.4
+            versão 1.5
         </div>
     </mat-drawer>
   

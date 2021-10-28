@@ -34,6 +34,9 @@ export class LocationOnMapComponent implements OnInit {
     this.lat = event.lat
     this.lng = event.lng
     this.zoom = 17
+    setTimeout(() => {
+      this.zoom = 18
+    }, 200);
   }
 
 }
