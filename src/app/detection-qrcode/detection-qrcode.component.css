@@ -9,25 +9,45 @@ h3, h3{
 }
 
 .options{
-    position: fixed;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
+    width: 100%;
+    height: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    z-index: 888 !important;
+    background-color: gray;
+}
+
+.carousel{
+    position: fixed;
+    width: 100%;
+    margin: 0 auto;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    margin: 0;
+    padding: 0 15px;
+}
+
+.carousel .card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
 }
 
 .card_option{
-    width: max-content;
+    width: 90%;
+    min-width: max-content;
     height: auto;
     padding: 5px 15px;
     line-height: normal;
-
     margin: 0 5px;
     background-color: white;
-    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
     color: black;
     border-radius: 50px;
     cursor: pointer;

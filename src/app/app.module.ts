@@ -3,10 +3,9 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { DragDropModule } from '@angular/cdk/drag-drop';
-// import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { MatMenuModule } from '@angular/material/menu';
 import { AgmCoreModule } from '@agm/core';
-// import { MapsService } from './maps.service';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -34,12 +33,12 @@ import { HomeComponent } from './home/home.component';
     MatSidenavModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    // SlickCarouselModule,
     MatMenuModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCVkT1zBJaeZqoUJgBUAmx6zfwSCtD-2q8'
     }),
-    DragDropModule
+    DragDropModule,
+    SlickCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent],

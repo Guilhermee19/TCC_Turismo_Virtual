@@ -45,31 +45,37 @@ export class DetectionQrcodeComponent implements OnInit {
         localStorage.setItem('code', item)
     }
 
-    // afterChange(e) {
-    //     console.log('afterChange');
-    // }
+    afterChange(e) {
+        console.log('afterChange');
+    }
     
-    // beforeChange(e) {
-    //     console.log('beforeChange');
-    // }
+    beforeChange(e) {
+        console.log('beforeChange');
+    }
 
-    // slideConfig = {  
-    //     "slidesToShow": 1,  
-    //     "slidesToScroll": 1,  
-    //     "dots": true,
-    //     "arrows": false,  
-    //     "infinite": true,
-    //     "autoplay": true,
-    //     "swipeToSlide": true,
-    //     "autoplaySpeed": 5000,
-    //     "lazyLoad": 'ondemand',
-    //     "responsive": 
-    //     [{
-    //         "breakpoint": 600,
-    //         "settings": {
-    //             "dots": false,
-    //         }
-    //     }]
-    // }; 
+    slideConfig = {  
+        "slidesToShow": 3,  
+        "slidesToScroll": 1,  
+        "dots": false,
+        "arrows": true,  
+        "infinite": true,
+        "autoplay": true,
+        "swipeToSlide": true,
+        "autoplaySpeed": 5000,
+        "lazyLoad": 'ondemand',
+        "responsive": 
+        [{
+            "breakpoint": 600,
+            "settings": {
+                "slidesToShow": 2, 
+            }
+        },
+        {
+            "breakpoint": 370,
+            "settings": {
+                "slidesToShow": 1, 
+            }
+        }]
+    }; 
 
 }

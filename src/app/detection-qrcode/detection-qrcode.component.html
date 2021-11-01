@@ -9,27 +9,21 @@
     </button>
 </div>
 
-<div *ngIf="qrcode" style="width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center;">
-    <div class="options">
-        <div *ngFor="let item of list">
-            <button mat-button (click)="selectModelo(item.code)" 
-                [ngClass]="{'select': select == item.code}" class="card_option"> {{ item.name }}
-            </button>
-        </div>
-    </div>
-
-    <!-- <ngx-slick-carousel class="carousel options" #slickModal="slick-carousel" [config]="slideConfig"  
+<div *ngIf="qrcode" style="width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center;">    
+    <!-- <div class="title"> Itens para Leitura </div> -->
+    <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig"  
         (afterChange)="afterChange($event)" (beforeChange)="beforeChange($event)">
-
-        <div ngxSlickItem *ngFor="let item of list">
+    
+        <div ngxSlickItem *ngFor="let item of list" class="card" style="margin-bottom: 10px;">
             <button mat-button (click)="selectModelo(item.code)" 
                 [ngClass]="{'select': select == item.code}" class="card_option"> {{ item.name }}
             </button>
         </div>
         
-    </ngx-slick-carousel> -->
+    </ngx-slick-carousel>
 
     <iframe *ngIf="select == 'modelo_00'" width="100%" height="100%" style="border: 0px solid transparent; overflow: hidden;" src="../../assets/sitesTeste/Modelo_0.html"></iframe>
     <iframe *ngIf="select == 'modelo_01'" width="100%" height="100%" style="border: 0px solid transparent; overflow: hidden;" src="../../assets/sitesTeste/Modelo_1.html"></iframe>
     <iframe *ngIf="select == 'modelo_02'" width="100%" height="100%" style="border: 0px solid transparent; overflow: hidden;" src="../../assets/sitesTeste/Modelo_2.html"></iframe>
 </div>
+        
