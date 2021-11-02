@@ -33,19 +33,26 @@ h2{
     top: 45px;
     right: 5px;
     width: 250px;
-    height: 15vw;
+    /* height: 15vw;
     max-height: 350px;
-    min-height: 150px;
+    min-height: 150px; */
     border-radius: 10px;
     padding: 10px;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
     z-index: 9999 !important;
 }
 
+.size_loop{
+    height: 12vw;
+    overflow-y: auto;
+    max-height: 350px;
+    min-height: 107px;
+}
+
 .title{
     font-weight: 500;
     cursor: pointer;
-    margin: 3px 0;
+    margin: 5px 0;
 }
 
 .card_glass{
@@ -79,4 +86,41 @@ h2{
     position: relative !important;
     background-color: rgba(0, 0, 0, 0.4) !important;
     z-index: 1;
+}
+
+.options{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn_{
+    padding: 5px;
+    height: auto;
+    line-height: 1;
+    border-radius: 60px;
+    margin: 3px 0;
+}
+
+.bt_about{
+    background-color: #324C5D;
+    color: white;
+}
+
+.bt_virtual{
+    background-color: #2A9E79;
+    color: white;
+}
+
+.bt_ra{
+    background-color: #F15D35;
+    color: white;
+}
+
+::ng-deep .gm-style .gm-style-iw-c {
+    padding: 12px !important;
+}
+
+::ng-deep .gm-style .gm-style-iw strong{
+    font-size: 15px !important;
 }

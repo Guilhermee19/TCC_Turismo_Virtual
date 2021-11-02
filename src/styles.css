@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import './animation.css';
 
 html, body { 
     height: 100%; 
@@ -16,4 +17,22 @@ body {
 .a-enter-vr-button{
     top: 75px;
     display: none;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+    position: relative;
+    width: 5px !important;
+    z-index: 988 !important;
+}
+::-webkit-scrollbar {
+    height: 5px !important;
+}
+::-webkit-scrollbar-track, ::-webkit-scrollbar-track {
+    background: #EEEEEE !important;
+}
+::-webkit-scrollbar-thumb, ::-webkit-scrollbar-thumb {
+    background-color: #4a4a4a !important;
+    border-radius: 6px !important;
+    border: 3px solid #4a4a4a !important;
 }

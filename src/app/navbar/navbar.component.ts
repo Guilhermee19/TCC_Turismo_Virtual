@@ -14,13 +14,15 @@ export class NavbarComponent implements OnInit {
         private storage: StorageService
     ) { 
         this.router.events.subscribe( data => {
-            this.url = this.router.url;
-            if(this.url == '/home')  this.title = 'Tour Virtual';
-            if(this.url == '/location-map')  this.title = 'Localizações';
-            if(this.url == '/virtual')  this.title = 'Realidade Virtual';
-            else if(this.url == '/detection')  this.title = 'Realidade Aumentada';
-            else if(this.url == '/location')  this.title = 'Realidade por Localização';
-            else if(this.url == '/test-zone')  this.title = 'Zona de Testes';
+            let aux = this.router.url.split('/');
+            console.log(aux)
+
+            this.url = aux[1]
+
+            if(this.url == 'home')  this.title = 'Tour Virtual';
+            if(this.url == 'location-map')  this.title = 'Localizações';
+            if(aux[3] == 'virtual')  this.title = 'Realidade Virtual';
+            if(aux[3] == 'detection')  this.title = 'Realidade Aumentada';
         }); 
     }
     

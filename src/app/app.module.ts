@@ -6,6 +6,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { MatMenuModule } from '@angular/material/menu';
 import { AgmCoreModule } from '@agm/core';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -38,7 +39,8 @@ import { HomeComponent } from './home/home.component';
       apiKey: 'AIzaSyCVkT1zBJaeZqoUJgBUAmx6zfwSCtD-2q8'
     }),
     DragDropModule,
-    SlickCarouselModule
+    SlickCarouselModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent],

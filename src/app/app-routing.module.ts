@@ -13,8 +13,8 @@ const routes: Routes = [
             {path:'', redirectTo: 'home', pathMatch: 'full'},
             {path:'home', component: HomeComponent },
             {path:'location-map', component: LocationOnMapComponent },
-            {path:'virtual', component: VirtualEnvironmentComponent },
-            {path:'detection', component: DetectionQrcodeComponent },
+            {path:'location-map/:id/virtual', component: VirtualEnvironmentComponent },
+            {path:'location-map/:id/detection', component: DetectionQrcodeComponent },
             {path:'test-zone', component: TestZoneComponent },
         ]
     },

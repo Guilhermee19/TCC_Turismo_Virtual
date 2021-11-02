@@ -1,16 +1,65 @@
-<div class="screen">
-    <div class="main">
-        <h1> BEM VINDO AO </h1>
-        <img src="../../assets/image/logo.png" class="logo">
-        <!-- <div class="about">
-            Sobre
-            <span style="position: absolute; top: 2px; right: 5px;">
-                <svg height="35px" viewBox="0 0 24 24" width="35px" fill="#fff"><path d="M0 0h24v24H0z" fill="none"/><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>
-            </span>
-        </div> -->
-    </div>
-
+<div class="card_video">
+    <div class="filter"></div>
     <div class="backgroundAnimado">
         <video src="../../assets/Street - 19627.mp4" loop autoplay></video>
     </div>
+</div>
+
+<div class="screen">
+    <div id="card_welcome" class="main center_move_top">
+        <h1> BEM VINDO AO </h1>
+        <img src="../../assets/image/logo.png" class="logo">
+        
+        <div class="about" (click)="navigateTo('card_screen')">
+            Telas
+            <span style="position: absolute; top: 2px; right: 5px;">
+                <svg height="35px" viewBox="0 0 24 24" width="35px" fill="#fff"><path d="M0 0h24v24H0z" fill="none"/><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>
+            </span>
+        </div>
+    </div>
+
+    <div id="card_screen" #card_screen class="main">
+
+        <div class="card_info">
+            <img src="../../assets/image/screens/Screen Map.jpg" 
+            class="image_screen"  routerLink="/location-map/">
+
+            <div class="card_text">
+                <h2> Localizações </h2>
+                Mapa de localizações, onde mostra os pontos turisticos da cidade. 
+                Dando a posibilidade do usuário ver os locais pelo mapa e ao selecionar
+                um ponto no menu flutuante ele da um zoom no local escolhido, clicando no
+                ponto no mapa ele mostra algumas opções que o usuário tem, como fazer um tur virtual
+                no local ou ver os itens em realidade aumentada atravez de um qrcode. O card ainda tem 
+                a opção de ser movido, caso fique em cima de alguma informação no mapa.
+            </div>
+        </div>
+
+
+        <div class="card_info reverse">
+            <img src="../../assets/image/screens/Screen Ambiente.jpg" 
+            class="image_screen" routerLink="/location-map/1/virtual/">
+
+            <div class="card_text">
+                <h2> Realidade Virtual </h2>
+                Apos selecionar o tuor virtual do local, ele leva para a tela com os itens em 3D, 
+                no computador ele pode se mover pelo local usando as teclas e o mouse. No celular
+                essa funcionalidade de andar pelo local ainda não estadisponivel.
+            </div>
+        </div>
+
+
+        <div class="card_info">
+            <img src="../../assets/image/screens/Screen RA.jpg" 
+            class="image_screen" routerLink="/location-map/1/detection/">
+
+            <div class="card_text">
+                <h2> Realidade Aumentada </h2>
+                Existe tambem a posibilidade de realidade aumentada, onde se faz a leitura
+                dos Qrcodes do site e projeta os itens do local.
+            </div>
+        </div>
+
+    </div>
+    
 </div>
