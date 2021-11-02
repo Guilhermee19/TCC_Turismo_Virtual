@@ -15,7 +15,6 @@ export class NavbarComponent implements OnInit {
     ) { 
         this.router.events.subscribe( data => {
             let aux = this.router.url.split('/');
-            console.log(aux)
 
             this.url = aux[1]
 
@@ -34,16 +33,11 @@ export class NavbarComponent implements OnInit {
     qrcodes;
 
     ngOnInit(): void {
-
         this.qrcodes = this.storage.listQrcodes;
         
         setInterval(function(){ 
             // console.clear();
         }, 1000);
-    }
-
-    sendEmail(){
-        this.storage.sendMail()
     }
 
 }

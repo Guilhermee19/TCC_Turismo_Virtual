@@ -14,20 +14,20 @@ export class HomeComponent implements OnInit {
   cards: any;
 
   ngOnInit(): void {
-    window.scrollTo({top: 944, behavior: 'smooth'});  
+    window.scrollTo(500, 0);
+    // window.scrollTo({top: 0, behavior: 'smooth'});  
   }
 
   navigateTo(element: string) {
-    console.log(element)
     this[element].nativeElement.scrollIntoView({ block: "start", behavior: "smooth" });
-   
-    const yOffset = 0; 
+  
+    const yOffset = -75; 
     const position = document.getElementById(element);
     const y = position.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
-    console.log(y)
-
-    window.scrollTo({top: y, behavior: 'smooth'});  
+    window.onunload = function(){ 
+      window.scrollTo({top: y, behavior: 'smooth'});  
+    }
   }
 
   navigateTop(){
