@@ -2,33 +2,10 @@
 <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
 
-
-<!-- <div class="center" *ngIf="isMobile">
-    <h2 (click)="clickHandler('W')" style="transform: translateY(-30px);">
-        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14l-6-6z"/></svg>
-    </h2>
-    <h2 (click)="clickHandler('A')" style="transform: translateX(-30px);">
-        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12l4.58-4.59z"/></svg>
-    </h2>
-    <h2 (click)="clickHandler('S')" style="transform: translateY(30px);">
-        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87"/><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"/></svg>
-    </h2>
-    <h2 (click)="clickHandler('D')" style="transform: translateX(30px);">
-        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/></svg>
-    </h2>
-</div>  -->
-
-
 <a-scene>
     <a-assets>
-        <!-- <audio src="/assets/ruido-ambiente-da-cidade.mp3" volume="0.001" autoplay></audio> -->
-        <img id="sky" src="http://360.littlstar.com/production/027a3245-0340-41c0-b0e1-8b7259d3ab69/web_poster.jpg">
-        <img id="city" src="https://thumbs.dreamstime.com/b/seamless-sky-sea-panorama-daytime-suitable-d-renderings-as-background-mapped-sphere-representing-42211614.jpg">>>
+        <img id="sky" src="https://thumbs.dreamstime.com/b/seamless-sky-sea-panorama-daytime-suitable-d-renderings-as-background-mapped-sphere-representing-42211614.jpg">
     </a-assets>
-
-    <!-- <a-light type="directional" position="0 0 0" rotation="-90 -90 0" target="#directionaltarget">
-        <a-entity id="directionaltarget" position="0 0 -1"></a-entity>
-    </a-light> -->
    
     <a-entity gltf-model="../../assets/modelo3D/MonumentoDedoDeDeus.gltf" scale="1 1 1" position="-3 0 -6"> </a-entity>
     <a-entity gltf-model="../../assets/modelo3D/Poste.gltf" scale="2.2 2.2 2.2" position="-3 0 -2"> </a-entity>
@@ -40,7 +17,7 @@
     <a-plane rotation="-90 0 0" width="500" height="500" 
         material="src: assets/image/textura/chão.jpg; color: #696969; repeat: 100 100; metalness: 0" ></a-plane>
         
-    <a-sky radius="120" src="#city"></a-sky>
+    <a-sky radius="120" src="#sky"></a-sky>
 
     <a-entity id="camera-rig" mixin="campos">
         <a-entity camera="active: true" look-controls id="cardCamera" wasd-controls position="0 2 0"></a-entity>
