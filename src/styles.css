@@ -36,3 +36,54 @@ body {
     border-radius: 6px !important;
     border: 3px solid #4a4a4a !important;
 }
+
+/* checkbox */
+
+.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background, .mat-checkbox-checked.mat-accent .mat-checkbox-background {
+    background-color: white;
+    border: 2px solid #0588b8;
+}
+
+.mat-checkbox-checkmark-path {
+    stroke: #0588b8 !important;
+}
+
+.mat-slide-toggle-bar, .mat-slide-toggle-thumb {
+    background: transparent;
+    border: 3px solid !important;
+    border-color: #0000004D !important;
+}
+
+.mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
+    background-color: #0588b8 !important;
+    border-color: transparent !important;
+}
+
+.mat-slide-toggle.mat-checked .mat-slide-toggle-bar {
+    background-color: transparent !important;
+    border-color: #15a1d4 !important;
+}
+
+.mat-slide-toggle.mat-checked .mat-slide-toggle-thumb-container {
+    transform: translate3d(14px, 0, 0) !important;
+}
+
+.mat-slide-toggle-bar {
+    width: 30px !important;
+    height: 16px !important;
+    border-radius: 12px !important;
+}
+
+.mat-slide-toggle-thumb {
+    background: #0000004D !important;
+    border-color: transparent !important;
+    height: 7px !important;
+    width: 7px !important;
+}
+
+.mat-slide-toggle-thumb-container {
+    width: 7px !important;
+    height: 7px !important;
+    top: 1px !important;
+    left: 2px !important;
+}

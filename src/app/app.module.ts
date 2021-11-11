@@ -7,6 +7,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { AgmCoreModule } from '@agm/core';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -40,7 +41,8 @@ import { HomeComponent } from './home/home.component';
     }),
     DragDropModule,
     SlickCarouselModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatSlideToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -21,6 +21,7 @@ export class DetectionQrcodeComponent implements OnInit {
         {name: 'Monumento Olímpico', code:'modelo_02'}
     ]
     select: string = '';
+    statusCamera: boolean = false;
 
     ngOnInit(): void {
         if(localStorage.getItem('check_termo') == null || localStorage.getItem('check_termo') == 'false'){
@@ -35,6 +36,11 @@ export class DetectionQrcodeComponent implements OnInit {
         // console.log(this.select)
     }
 
+    checkValue(){
+        setTimeout(() => {
+            this.statusCamera = !this.statusCamera;
+        }, 100);
+    }
     checkTermo(){
         localStorage.setItem('check_termo', 'true')
         this.qrcode = true;

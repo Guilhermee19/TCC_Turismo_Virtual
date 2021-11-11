@@ -22,8 +22,19 @@
         
     </ngx-slick-carousel>
 
-    <iframe *ngIf="select == 'modelo_00'" width="100%" height="100%" style="border: 0px solid transparent; overflow: hidden;" src="../../assets/sitesTeste/Modelo_0.html"></iframe>
-    <iframe *ngIf="select == 'modelo_01'" width="100%" height="100%" style="border: 0px solid transparent; overflow: hidden;" src="../../assets/sitesTeste/Modelo_1.html"></iframe>
-    <iframe *ngIf="select == 'modelo_02'" width="100%" height="100%" style="border: 0px solid transparent; overflow: hidden;" src="../../assets/sitesTeste/Modelo_2.html"></iframe>
+    <div class="icon_camera">
+        <mat-slide-toggle [(ngModel)]="statusCamera" class="checkbox" style="margin-top: 2px;" (click)="checkValue()">
+        </mat-slide-toggle>
+
+        <svg *ngIf="!statusCamera" height="30px" viewBox="0 0 24 24" width="30px" [ngStyle]="{'fill': statusCamera ? '#0588b8' : '#0000004D'}"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M9.56 8l-2-2-4.15-4.14L2 3.27 4.73 6H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.21 0 .39-.08.55-.18L19.73 21l1.41-1.41-8.86-8.86L9.56 8zM5 16V8h1.73l8 8H5zm10-8v2.61l6 6V6.5l-4 4V7c0-.55-.45-1-1-1h-5.61l2 2H15z"/></svg>
+        <svg *ngIf="statusCamera" height="30px" viewBox="0 0 24 24" width="30px" [ngStyle]="{'fill': statusCamera ? '#0588b8' : '#0000004D'}"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M15 8v8H5V8h10m1-2H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4V7c0-.55-.45-1-1-1z"/></svg>
+    </div>
+
+    <iframe *ngIf="statusCamera && select == 'modelo_00'" width="100%" height="100%" style="border: 0px solid transparent; overflow: hidden;" src="../../assets/sitesTeste/Modelo_0.html"></iframe>
+    <iframe *ngIf="statusCamera && select == 'modelo_01'" width="100%" height="100%" style="border: 0px solid transparent; overflow: hidden;" src="../../assets/sitesTeste/Modelo_1.html"></iframe>
+    <iframe *ngIf="statusCamera && select == 'modelo_02'" width="100%" height="100%" style="border: 0px solid transparent; overflow: hidden;" src="../../assets/sitesTeste/Modelo_2.html"></iframe>
+
+    <iframe *ngIf="!statusCamera && select == 'modelo_01'" width="100%" height="100%" style="border: 0px solid transparent; overflow: hidden;" src="../../assets/sitesTeste/Modelo_11.html"></iframe>
+    <iframe *ngIf="!statusCamera && select == 'modelo_02'" width="100%" height="100%" style="border: 0px solid transparent; overflow: hidden;" src="../../assets/sitesTeste/Modelo_22.html"></iframe>
 </div>
         
