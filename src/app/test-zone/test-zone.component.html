@@ -2,36 +2,48 @@
 <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
 
-<a-scene>
-      
-    <table style="position: absolute; top: 50%; right: 50%; z-index: 9999;">
-        <tr>
-          <td colspan="2" align="center">
-            <input type="button" value="Acima" onclick="direcionar(38)" />
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <input type="button" value="Esquerda" onclick="direcionar(37)"/>    
-          </td>
-          <td>
-            <input type="button" value="Direita" onclick="direcionar(39)"/>
-          </td>
-        </tr>
-        <tr>
-          <td colspan="2" align="center">
-            <input type="button" value="Abaixo" onclick="direcionar(40)"/>
-          </td>
-        </tr>
-    </table>
 
-    <!-- <a-entity gltf-model="../../assets/modelo3D/MonumentoDedoDeDeus.gltf" scale="1 1 1" position="-3 0 -6"> </a-entity> -->
-    <!-- <a-entity gltf-model="../../assets/modelo3D/Poste.gltf" scale="2.2 2.2 2.2" position="-3 0 -2"> </a-entity> -->
-    <!-- <a-entity gltf-model="../../assets/modelo3D/Grades.gltf" scale="0.4 0.4 0.4" position="-18 0 -15"> </a-entity> -->
-    <!-- <a-entity gltf-model="../../assets/modelo3D/MonumentoOlimpiadas.gltf" scale="0.5 0.5 0.5" position="-27 0 -10.8"> </a-entity> -->
-    <!-- <a-entity gltf-model="../../assets/modelo3D/gradesFutebol.gltf" scale="0.4 0.4 0.4" position="-63.5 0 26"> </a-entity> -->
-    <a-entity gltf-model="../../assets/modelo3D/Poste.gltf" scale="2.2 2.2 2.2" position="-20 0 -13"> </a-entity>
+<div class="center" *ngIf="isMobile">
+  <h2 (click)="clickHandler('W')" style="transform: translateY(-30px);">
+    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14l-6-6z"/></svg>
+  </h2>
+  <h2 (click)="clickHandler('A')" style="transform: translateX(-30px);">
+    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12l4.58-4.59z"/></svg>
+  </h2>
+  <h2 (click)="clickHandler('S')" style="transform: translateY(30px);">
+    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87"/><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"/></svg>
+  </h2>
+  <h2 (click)="clickHandler('D')" style="transform: translateX(30px);">
+    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/></svg>
+  </h2>
+</div> 
+
+
+<a-scene>
+  <a-assets>
+    <img id="sky" src="https://thumbs.dreamstime.com/b/seamless-sky-sea-panorama-daytime-suitable-d-renderings-as-background-mapped-sphere-representing-42211614.jpg">
+  </a-assets>
+  
+  <a-entity laser-controls="hand: right"></a-entity>
+
+  <a-entity gltf-model="../../assets/modelo3D/MonumentoDedoDeDeus.gltf" scale="1 1 1" position="-3 0 -6"> </a-entity>
+  <a-entity gltf-model="../../assets/modelo3D/Poste.gltf" scale="2.2 2.2 2.2" position="-3 0 -2"> </a-entity>
+  <a-entity gltf-model="../../assets/modelo3D/Grades.gltf" scale="0.4 0.4 0.4" position="-18 0 -15"> </a-entity>
+  <a-entity gltf-model="../../assets/modelo3D/MonumentoOlimpiadas.gltf" scale="0.5 0.5 0.5" position="-27 0 -10.8"> </a-entity>
+  <a-entity gltf-model="../../assets/modelo3D/gradesFutebol.gltf" scale="0.4 0.4 0.4" position="-63.5 0 26"> </a-entity>
+  <a-entity gltf-model="../../assets/modelo3D/Poste.gltf" scale="2.2 2.2 2.2" position="-20 0 -13"> </a-entity>
+
+  <a-plane rotation="-90 0 0" width="500" height="500" 
+    material="src: assets/image/textura/chão.jpg; color: #696969; repeat: 100 100; metalness: 0" ></a-plane>
+      
+  <a-sky radius="120" src="#sky"></a-sky>
+
+  <a-camera id="camera-rig" >
+    <a-cursor
+      wasd-controls 
+      rotation="0 45 0"
+      position="0 2 0"
+      camera="active: true"></a-cursor>
+  </a-camera>
 
 </a-scene>
-
-

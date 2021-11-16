@@ -22,6 +22,11 @@
                 Baixar Qrcode
             </div>
 
+            <div class="option" routerLink="/test-zone">
+                <img src="../../assets/image/icon/icon_test.png" class="icon">
+                Zona de testes
+            </div>
+
             <mat-menu #menu="matMenu" xPosition="before">
                 <div *ngFor="let qrcode of qrcodes">
                     <a style="text-decoration: none; color: white; display: flex; justify-content: flex-start; align-items: center;" href="{{ qrcode.image }}" download> 

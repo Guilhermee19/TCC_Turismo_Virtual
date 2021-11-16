@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { DeviceDetectorService } from 'ngx-device-detector';
 
 @Component({
   selector: 'app-test-zone',
@@ -7,40 +8,50 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestZoneComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private deviceService: DeviceDetectorService
+  ) { }
 
-  metaChar;
-  exampleKey;
+  @ViewChild('joy3Div', {static: true}) joy3Div;
 
+  array={x: 0, y:2, z:0}
+  save_array={x: 0, y:2, z:0}
+  position: string;
+  angulo: number;
+
+  isMobile
 
   ngOnInit(): void {
-    this.metaChar = false;
-    this.exampleKey = 16;
+    this.isMobile = this.deviceService.isMobile() || this.deviceService.isTablet();
+    // this.isMobile = true;
   }
 
-  keyEvent(event) {
-   
-    var key = event.keyCode || event.which;
-    var keychar = String.fromCharCode(key);
-    if (key == this.exampleKey) {
-      this.metaChar = true;
-    }
-    if (key != this.exampleKey) {
-      if (this.metaChar) {
-        alert("Combination of metaKey + " + keychar);
-        this.metaChar = false;
-      } else {
-        alert("Key pressed " + key);
-      }
-    }
+  ctToPos(posPbjetc){
+    return `${posPbjetc.x} ${posPbjetc.y} ${posPbjetc.z}`
   }
 
-  metaKeyUp (event) {
-    var key = event.keyCode || event.which;
-  
-    if (key == this.exampleKey) {
-      this.metaChar = false;
+  clickHandler(value){
+    switch(value){
+      case 'W': 
+        this.array.z -= 2;
+        break;
+      case 'D': 
+        this.array.x += 2;
+        break;
+      case 'S': 
+        this.array.z += 2;
+        break;
+      case 'A': 
+        this.array.x -= 2;
+        break;
     }
-  }
 
+    let cameraRig = document.querySelector('#camera-rig')
+    cameraRig.setAttribute('animation', `property: position; from: ${this.save_array.x} ${this.save_array.y} ${this.save_array.z}; to: ${this.array.x} ${this.array.y} ${this.array.z}; dur: 200`)
+    this.save_array.x = this.array.x
+    this.save_array.y = this.array.y
+    this.save_array.z = this.array.z
+
+    console.log(this.save_array.x, this.save_array.y, this.save_array.z)
+  }
 }

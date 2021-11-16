@@ -1,0 +1,89 @@
+p{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    z-index: 99;
+}
+
+.arrows{
+    width: 30px;
+    height: 30px;
+    border: 0px solid transparent;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+}
+
+.arrows:hover{
+    background-color: rgb(232, 232, 232);
+}
+
+#top{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+#bottom{
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+#left{
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+#right{
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+#joy3Div{
+	width:200px;
+	height:200px;
+	margin:50px; 
+    margin:50px; 
+    position:fixed; 
+    top:30px; 
+    left:50px;
+}
+#joystick{
+	border: 1px solid #FF0000;
+}
+#joystick2{
+	border: 1px solid #0000FF;
+}
+
+.position{
+    position: fixed;
+    top: 60px;
+    left: 10px;
+}
+
+
+.center{
+    position: absolute;
+    bottom: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.center h2{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
